@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>F(x)=J(s)</title>
+
+    <style type="text/css">
+        html, body {
+            background: rgb(200, 200, 200);
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            margin: 0px;
+            overflow: hidden;
+        } 
+        </style>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/term.js"></script>
+    <script type="text/javascript" src="js/math.js"></script>
+    <script type="text/javascript" src="js/graph.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <!-- [CAUTION] -->
+    <script type="text/javascript" src="js/tests.js"></script>
+    
+    <link rel="Stylesheet" type="text/css" href="css/graph.css" />
+    <link rel="Stylesheet" type="text/css" href="css/ui.css" />
+
+</head>
+<body>
+
+<div id="menuBox">
+
+<div class="menuItem">
+Zoom-><input type="text" class="inputBox" id="zoomTextBox" />
+<div class="label" id="zoomLabel"></div>
+<div class="waffleButton" id="setZoomButton">Set</div>
+</div>
+
+<div class="menuItem">
+Term-><input type="text" class="inputBox" id="termTextBox" /><br />
+<div class="waffleButton" id="addTermButton">Add Term</div>
+<div class="waffleButton" id="newFunctionButton">New Function</div><br />
+<div class="label" id="fxLabel"></div>
+</div>
+
+<div class="menuItem">Bounds-><br />
+<input type="text" class="inputBox" id="leftBoundTextBox" /><div class="label" id="leftBoundLabel"></div><br />
+<input type="text" class="inputBox" id="rightBoundTextBox" /><div class="label" id="rightBoundLabel"></div>
+<div class="waffleButton" id="setBoundsButton">Set</div>
+</div>
+
+<div class="menuItem">
+Intensity-><input type="text" class="inputBox" id="inverseQualityTextBox" />
+<div class="label" id="inverseQualityLabel"></div><div class="waffleButton" id="setIntensityButton">Set</div>
+</div>
+
+<div class="menuItem" id="initializeMI">
+Draw Graph-><div class="waffleButton" id="drawButton">Draw</div>
+<div class="waffleButton" id="autoDrawButton">Auto-Draw</div>
+</div>
+
+<div class="menuItem">
+Graphs->[Feature Not Yet Defined]
+</div>
+
+<div class="menuItem">
+Information<br />
+Points: <div class="label" id="pointCountLabel"></div>
+
+</div>
+
+</div>
+
+<div id="shPanelButton">Hide</div>
+<div id="xAxis"></div>
+<div id="yAxis"></div>
+
+<script type="text/javascript">
+
+    updateOrigin();
+    drawNumbers();
+    drawGrid();
+
+
+    setInterval(function () {
+        //Interface
+        updateUI();
+        if (autoDraw === true) {
+            draw();
+        }
+    }, 1000);
+
+    window.onresize = function () {
+        updateOrigin();
+        drawNumbers();
+        drawGrid();
+    }
+
+</script>
+</body>
+</html>

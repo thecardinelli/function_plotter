@@ -1,0 +1,77 @@
+﻿        
+        
+        #menuBox {
+            position: fixed;
+            display: inline-block;
+            height: 100%;
+            background: rgb(225, 225, 225);
+            z-index: 1;
+            border-right: 2px solid rgb(0, 0, 0);
+        }
+        
+        .inputBox {
+            background: rgb(200, 200, 200);
+            width: 100px;
+            margin: 5px;
+        }
+        
+        .menuItem {
+            display: block;
+            float: top;
+            background: rgb(150, 150, 150);
+            margin: 10px;
+            padding: 10px;
+            font-family: Ubuntu;
+        }
+        
+        .waffleButton {
+            display: block;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            cursor: default;
+        }
+        
+        #shPanelButton {
+            display: block;
+            position: fixed;
+            padding: 5px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            border-left: none;
+            cursor: default;
+            z-index: 1;
+        }
+        
+        .waffleButton:hover, #shPanelButton:hover {
+            background: rgba(0, 0, 0, .25);
+        }
+        
+        .waffleButton:active, #shPanelButton:active {
+            background: rgba(0, 0, 0, 1.0);
+            color: rgb(255, 255, 255);
+        }
+        
+        .label {
+            display: inline-block;
+            margin: 10px;
+            font-family: Ubuntu;
+        }
+        
+        .sourceCode {
+            background: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 10px;
+            z-index: 2;
+            color: rgb(0, 255, 0);
+            font-family: Consolas;
+            text-align: left;
+        }
